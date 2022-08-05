@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>page title</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="App">
+        <div class="App-wrapper">
+          <div class="App-inner">
+            <a id="a" href="yandexkey://open">Click to open deeplink</a>
+            <button id="btn">Click to open deeplink</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", (event) => {
+        if (window) {
+          window.location = "yandexkey://open";
+        }
+
+        btn.innerHTML = "<strong>Button is clicked!</strong>";
+      });
+    </script>
+  </body>
+</html>
